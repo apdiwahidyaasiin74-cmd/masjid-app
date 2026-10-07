@@ -1,0 +1,70 @@
+========================================================================
+     HABKA BILAASHKA AH (FREE $0) EE ONLINE-KA LOOGU TALAGALAY TIJAABADA
+========================================================================
+
+Waxaad haysataa 2 Dhabba-boqor oo Bilaash ah ($0) oo aad nidaamka shiine 
+online ugu soo saari karto tijaabo ahaan:
+
+========================================================================
+NIDAMKA 1-AAD: RENDER.COM (WAA MIDKA UGU WANAAGSAN EE GITHUB KU XIRAN)
+========================================================================
+
+TALLAABADA 1: GITHUB KU SHUUBIDA CORDE-KA
+1. Ka fur akoon GitHub (https://github.com).
+2. Abuur repository cusub oo magaciisu yahay `shiine-app`.
+3. Kumbuyuutarkaaga Terminal-ka ku qor amarradan:
+   git init
+   git add .
+   git commit -m "Shiine App Initial Commit"
+   git branch -M main
+   git remote add origin https://github.com/USERNAME-KAAGA/shiine-app.git
+   git push -u origin main
+
+TALLAABADA 2: AKOON KA FUR RENDER.COM
+1. Tag https://render.com oo ku Sign Up gareee GitHub-kaaga.
+2. Riix batoonka "New +" oo dooro "Web Service".
+3. Dooro repository-gaaga `shiine-app` ee GitHub.
+
+TALLAABADA 3: HABAYNTA DHEERIGA AH (SETTINGS)
+1. **Name**: shiine-app
+2. **Environment**: PHP
+3. **Build Command**: 
+   composer install --no-dev --optimize-autoloader && touch database/database.sqlite && php artisan migrate:fresh --seed --force
+4. **Start Command**: 
+   php artisan serve --host 0.0.0.0 --port $PORT
+
+TALLAABADA 4: VARIABLE-KA ENVIRONMENT-KA (Environment Variables)
+Qeybta "Environment Variables" ku dar kuwaan:
+- `APP_ENV` = `production`
+- `APP_DEBUG` = `true`
+- `APP_KEY` = `base64:irdmNIcsRpQz1U0YXtcnDB38PHRRUaef4i0w6tFOv7s=`
+- `DB_CONNECTION` = `sqlite`
+- `SESSION_DRIVER` = `file`
+- `CACHE_STORE` = `file`
+
+5. Riix "Create Web Service". Waxay qaadanaysaa 2-3 daqiiqo.
+6. Render wuxuu ku siinayaa Link Bilaash ah oo ku dhamaada `.onrender.com` (Tusaale: `https://shiine-app.onrender.com`).
+
+========================================================================
+NIDAMKA 2-AAD: INFINITYFREE.NET (SI RAXIIS AH SIDA CPANEL-KA OO KALE)
+========================================================================
+
+1. Tag https://infinityfree.net oo ka fur akoon bilaash ah.
+2. Abuur Domain bilaash ah (Tusaale: `shiine.great-site.net`).
+3. Gal "File Manager"-ka ama waddada FTP-da.
+4. Upload ka dhig ZIP-ka galka `shiine` oo dhan galka `htdocs`.
+5. Ku xir MySQL Database-ka bilaashka ah ee InfinityFree ku siiyo.
+
+========================================================================
+AKOONNADA UGU HORREEYA EE AAD KU GALI KARTOS:
+========================================================================
+- Super Admin: Username = `superadmin`, Password = `123`
+- Maamulaha Shiine: Username = `shiine`, Password = `123`
+
+========================================================================
+MOBILE-KA LOOGU ISTICMAALO:
+========================================================================
+Marka link-ga bilaashka ah (Tusaale: https://shiine-app.onrender.com) uu shaqeeyo:
+1. Ka fur Chrome ama Safari-ga Mobile-kaaga.
+2. Riix 3-da dhibcood (Chrome) ama Share (Safari) -> dooro "Add to Home Screen".
+3. Wuxuu si toos ah ugu dhaceyaa Mobile-kaaga sida App oo kale!

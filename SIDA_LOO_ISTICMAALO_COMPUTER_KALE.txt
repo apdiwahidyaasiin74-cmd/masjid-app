@@ -1,0 +1,32 @@
+﻿========================================================================
+TALAABOOYINKA LAGU WADAJIRO MASHRUUCA SHIINE COMPUTER KALE
+========================================================================
+
+1. DATABASE-KA:
+   - Fur XAMPP oo shid Apache iyo MySQL.
+   - Fur browser-ka oo gal: http://localhost/phpmyadmin
+   - Samee Database cusub oo magaciisu yahay: shiine
+   - Dooro database-ka 'shiine', kadib riix "Import".
+   - Dooro faylka ku dhex jira folder-kan ee magaciisu yahay:
+     shiine_database.sql
+   - Riix "Go" ama "Import" si dhammaan xogta (shaqaalaha, imaamyada, 
+     xubnaha guddiga, permission-yada iyo dejinta fariimaha) ugu shubmaan.
+
+2. FAYLKA .ENV:
+   - Folder-kan waxaa ku jira .env iyo .env.backup.
+   - Xaqiiji in xogta MySQL ay sax tahay:
+     DB_CONNECTION=mysql
+     DB_HOST=127.0.0.1
+     DB_PORT=3306
+     DB_DATABASE=shiine
+     DB_USERNAME=root
+     DB_PASSWORD=
+
+3. BILAABIDDA APPLICATION-KA:
+   - Fur Command Prompt ama PowerShell gudaha folder-kan:
+     php artisan key:generate
+     php artisan serve
+   - Waxaa kaaga furmaya browser-ka: http://127.0.0.1:8000
+
+Dhammaan xogtii iyo koodhkii mashruuca waa kuwo diyaarsan oo aan waxba ka maqnayn!
+========================================================================

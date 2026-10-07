@@ -1,0 +1,58 @@
+========================================================================
+    NIDAAMKA MAAMULKA MASAAJIDKA - DHABBA-BOQORADA ONLINE & MOBILE
+========================================================================
+
+1. KORMEERKA IYO ISTICMAALKA MOBILE-KA (MOBILE RESPONSIVE & PWA):
+   ---------------------------------------------------------------------
+   * Nidaamku wuxuu si buuxda ugu habaysan yahay dhammaan taleefannada 
+     gacanta (Android iyo iPhone) iyo Tablets-ka.
+   * Menu-ga navigation-ka wuxuu leeyahay batoonka sadexda khad ah (Hamburger)
+     oo marka la taabto si toos ah mobile-ka ugu soo furaaya Menu aad u nadiif ah.
+   * Marka aad nidaamka ka furto Chrome ama Safari ee Mobile-ka:
+     - Android: Riix 3-da dhibcood ee sare ee Chrome -> dooro "Add to Home Screen"
+     - iPhone: Riix batoonka Share ee Safari -> dooro "Add to Home Screen"
+     Nidaamku wuxuu noqonayaa sida App Taleefanka ku jira oo kale!
+
+========================================================================
+2. TALLAABOOYINKA LAGU GAYNAYO ONLINE (LIVE SERVER DEPLOYMENT):
+   ---------------------------------------------------------------------
+   Tallaabada 1: Soo raridda Faylasha (Upload Files)
+   - Ka samee ZIP folder-ka mashruuca (shiine).
+   - Ka dhig cPanel / VPS / Hostinger ama Server-ka aad iibsatay.
+   - Extract ka dheh faylasha ku jira cPanel "public_html" ama galka server-ka.
+
+   Tallaabada 2: Habaynta Faylka .ENV ee Server-ka Online-ka ah
+   - Badal faylka .env xogtiisa:
+     APP_ENV=production
+     APP_DEBUG=false
+     APP_URL=https://domainkaaga.com   (ama IP-ga server-ka)
+     
+     DB_CONNECTION=sqlite             (ama mysql haddii aad MySQL isticmaalayso)
+     # Haddii aad MySQL isticmaalayso:
+     # DB_HOST=127.0.0.1
+     # DB_DATABASE=shiine_db
+     # DB_USERNAME=user_db
+     # DB_PASSWORD=password_db
+
+   Tallaabada 3: Shaanxinta & Xanta Server-ka (Terminal / SSH Command)
+   - Ku wada amarradan terminal-ka Server-ka:
+     php artisan key:generate
+     php artisan storage:link
+     php artisan migrate:fresh --seed   (ama php artisan migrate)
+     php artisan config:cache
+     php artisan route:cache
+     php artisan view:cache
+
+========================================================================
+3. AKOONNADA MAAMULKA EE DIYAARSAN:
+   ---------------------------------------------------------------------
+   * Super Admin (Developer):
+     Username: superadmin
+     Password: 123
+   * Shiine Admin (Maamulaha):
+     Username: shiine
+     Password: 123
+
+Nidaamku waa mid ammaan ah, mobile-ka ugu shaqaynaya si heer sare ah,
+diyaar u ah in laga kormeero meel kasta oo dunida ka mid ah!
+========================================================================
