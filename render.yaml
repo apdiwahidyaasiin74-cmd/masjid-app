@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: shiine-masjid-app
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: "true"
+      - key: APP_KEY
+        value: base64:irdmNIcsRpQz1U0YXtcnDB38PHRRUaef4i0w6tFOv7s=
+      - key: DB_CONNECTION
+        value: sqlite
