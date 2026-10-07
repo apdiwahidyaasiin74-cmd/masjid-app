@@ -18,14 +18,11 @@ WORKDIR /var/www/html
 # Copy application files
 COPY . .
 
-# Install PHP dependencies & setup SQLite database
+# Install PHP dependencies
 RUN composer install --no-dev --optimize-autoloader
-RUN touch database/database.sqlite
-RUN php artisan migrate:fresh --seed --force
-RUN php artisan config:clear && php artisan cache:clear && php artisan view:clear
 
 # Expose port 8000
 EXPOSE 8000
 
-# Start Laravel server
-CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
+# Run database setup & start server at container runtime
+CMD ["sh", "-c", "touch database/database.sqlite && php artisan key:generate --force && php artisan migrate:fresh --seed --force && php artisan serve --host=0.0.0.0 --port=8000"]
